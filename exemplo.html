@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Saberes Consultoria Empresarial</title>
+
+    <!-- Fonte moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <h1>Saberes Consultoria</h1>
+    <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+    <nav class="nav-links">
+        <a href="#beneficios">Benefícios</a>
+        <a href="#oferta">Oferta</a>
+        <a href="#garantia">Garantia</a>
+        <a href="https://pay.hotmart.com/SEU-LINK-AQUI" class="btn">Comprar</a>
+    </nav>
+</header>
+
+<section class="hero fade-in">
+    <div class="hero-text">
+        <h2>Transforme sua empresa em um motor de crescimento sustentável</h2>
+        <p>
+            Um método exclusivo de consultoria que já ajudou mais de 
+            <strong>200 empresas</strong> a ampliar resultados e fortalecer operações 
+            em até <strong>45%</strong> em 6 meses.
+        </p>
+        <a href="https://pay.hotmart.com/SEU-LINK-AQUI" class="btn">Quero acessar agora</a>
+    </div>
+    <img src="imagens/dashboard.png" alt="Dashboard ilustrativo" class="hero-img slide-in">
+</section>
+
+<section id="beneficios" class="fade-in">
+    <h2>O que sua empresa vai conquistar</h2>
+    <div class="benefits">
+        <div class="benefit slide-in">
+            📈 Mais faturamento com estratégias sólidas
+        </div>
+        <div class="benefit slide-in">
+            ⚙️ Processos mais ágeis e eficientes
+        </div>
+        <div class="benefit slide-in">
+            👥 Equipes engajadas e de alta performance
+        </div>
+        <div class="benefit slide-in">
+            📊 Decisões baseadas em dados confiáveis
+        </div>
+    </div>
+</section>
+
+<section class="fade-in">
+    <h2>Receba gratuitamente um guia exclusivo</h2>
+    <div class="form-box slide-in">
+        <p>Baixe agora um checklist prático para começar a aplicar melhorias no seu negócio.</p>
+        <form onsubmit="window.location.href='https://pay.hotmart.com/SEU-LINK-AQUI'; return false;">
+            <input type="text" placeholder="Seu nome" required>
+            <input type="email" placeholder="Seu e-mail" required>
+            <button type="submit" class="btn">Quero receber</button>
+        </form>
+    </div>
+</section>
+
+<section class="oferta fade-in" id="oferta">
+    <h2>Oferta especial</h2>
+    <p>Programa completo com aulas online + sessões individuais de consultoria.</p>
+    <div class="preco slide-in">R$ 1.497</div>
+    <p>ou em até 12x no cartão</p>
+    <a href="https://pay.hotmart.com/SEU-LINK-AQUI" class="btn">Comprar agora</a>
+</section>
+
+<section id="garantia" class="fade-in">
+    <h2>Garantia incondicional de 7 dias</h2>
+    <p>Teste sem risco: se não for para você, devolvemos 100% do valor investido.</p>
+    <a href="https://pay.hotmart.com/SEU-LINK-AQUI" class="btn">Quero começar agora</a>
+</section>
+
+<!-- ===== REDES SOCIAIS ===== -->
+<section id="contato" class="fade-in">
+    <div class="container social-box">
+        <h2>Conecte-se conosco</h2>
+        <p>Siga-nos nas redes sociais ou entre em contato diretamente:</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/gabriel.v.b.vieira" target="_blank" class="social-item">
+                <img src="imagens/instagram.png" alt="Instagram">
+                <span>Instagram</span>
+            </a>
+            <a href="https://www.facebook.com/gabriel.vitor.511346" target="_blank" class="social-item">
+                <img src="imagens/facebook.png" alt="Facebook">
+                <span>Facebook</span>
+            </a>
+            <a href="https://wa.me/5511944922737" target="_blank" class="social-item">
+                <img src="imagens/whatsapp.png" alt="WhatsApp">
+                <span>WhatsApp</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<footer>
+    <p>© 2025 Saberes Consultoria. Todos os direitos reservados.</p>
+</footer>
+
+<script>
+    // Toggle do menu mobile
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => nav.classList.toggle('active'));
+
+    // Animações ao rolar
+    const animatedElements = document.querySelectorAll('.fade-in, .slide-in');
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+    }, { threshold: 0.2 });
+    animatedElements.forEach(el => observer.observe(el));
+
+    // Forçar scroll pro topo ao recarregar
+    window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+    };
+</script>
+
+</body>
+</html>
